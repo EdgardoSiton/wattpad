@@ -1,0 +1,558 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-color: #c3c8f3;
+}
+
+.container .sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: rgba(113, 99, 186, 255);
+    padding: 30px 0;
+}
+
+.container .sidebar ul li {
+   
+   
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(225, 225, 225, 0.05);
+}
+
+.container .sidebar ul li a{
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 18px;
+  
+}
+.container .sidebar ul li a .bx{
+    width: 25px;
+   
+}
+
+
+.container .main-content{
+    flex: 1; /* This will make the main content occupy remaining space */
+    margin-left: 200px;
+    padding: 20px; /* Optional padding */   
+    
+}
+.container .main-content .header {
+   height: 60px;
+    padding-left: 20px;
+    padding-right: 10px;
+    background: #ffffff;
+  
+    border-bottom: 1px solid #774ea7;
+    display: flex;
+    justify-content: center; /* Center horizontally within main content */
+    border-radius: 10px;
+    margin-top: 2px;
+    margin-bottom: 35px;
+}
+
+.container .main-content .info{
+    margin: 20px;
+    color: #717171;
+
+}
+
+.sidebar .logoo{
+    width: 180px;
+    margin-left: 9px;
+}
+
+.user {
+    padding-top: 15px;
+    margin-left: auto; /* Pushes user to the right */
+    color: #774ea7;
+    font-weight: 700;
+    padding-right: 12px;
+}
+.search-bar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 500px;
+}
+
+.search-bar {
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    background: #c9c9e9;
+    width: 100%;
+    padding-left: 35px; /* Adjust padding to accommodate the icon */
+    transition: box-shadow 0.3s; /* Add transition for smooth shadow change */
+    outline: none; /* Remove default focus outline */
+}
+
+.search-bar:focus {
+    box-shadow: 0 0 5px 0 rgba(35, 9, 65, 0.5); /* Add shadow color when focused */
+}
+
+.search-icon-container {
+    position: absolute;
+    left: 10px; /* Adjust positioning as needed */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-icon {
+    color: #774ea7;
+}
+
+.search-bar::placeholder {
+    color: #774ea7;
+    font-weight: 500;
+}
+
+/* Hide the placeholder text when search bar is focused */
+.search-bar:focus::placeholder {
+    color: transparent;
+}
+
+.note-header {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Align items horizontally with space between */
+}
+
+/* Styles for the main title */
+.main-title {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    list-style: none; /* Remove default list style */
+    display: flex; /* Use flexbox */
+}
+
+.main-title li {
+    margin-right: 20px; /* Adjust spacing between items */
+}
+
+/* Styles for the add box */
+.add-box {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
+}
+
+.add-icon {
+    margin-right: 10px; /* Adjust spacing between icon and text */
+}
+/* Hide the placeholder text when search bar is focused */
+.search-bar:focus::placeholder {
+    color: transparent;
+}
+
+    .note-container{
+        background: rgb(255, 255, 255);
+        padding: 2rem;
+        border-radius: 10px;
+        max-height: calc(100vh - 60px); /* Adjust as needed */
+        overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+        margin-top: 0;
+   
+    }
+  
+    .note-card{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 290px);
+        grid-gap: 20px;
+        padding: 20px;
+        padding-right: 110px;
+        height: 680px;
+        justify-content: center;
+    
+    }
+    .note-card li{
+        padding-top: 20px;
+        height: 280px;
+        list-style: none;
+        border-left-width: 4px; 
+                box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+                background:#fdfaf0;
+        border-radius: 5px;
+        padding: 15px 20px 20px;
+    
+       
+    }
+    .add-box {
+        display: flex;
+        align-items: center;
+        border: 1px solid #774ea7;
+        border-radius: 5px;
+        padding: 8px;   
+        padding-left: 30px; /* Adjust padding to accommodate the icons */
+        position: relative; /* Ensure relative positioning for absolute positioning of icons */
+        transition: border-color 0.3s, background-color 0.3s, color 0.3s; /* Add transition for smooth animation */
+    }
+    
+    .add-box:hover {
+        border-color: #231138;
+        background: rgba(113, 99, 186, 255);
+        color: white;
+    }
+    
+    .add-box:hover .add-text p {
+        color: white; /* Change text color on hover */
+    }
+    
+    .add-icon {
+        position: absolute; /* Position the icons absolutely within the container */
+        left: 10px; /* Adjust left position for proper alignment */
+        top: 35%; /* Position icons vertically centered */
+        transform: translateY(-50%); /* Adjust to vertically center the icons */
+      
+      
+    }
+    
+    .add-icon i {
+        position: absolute; /* Position the icons absolutely within the container */
+        top: 0; /* Position at the top of the container */
+        left: 0; /* Position at the left of the container */
+        transition: opacity 0.3s; /* Add transition for smooth opacity change */
+        
+    }
+    
+    .add-icon .colored {
+        z-index: 1; /* Place the colored icon behind */
+        opacity: 1; /* Show the colored icon by default */
+    }
+    
+    .add-icon .white {
+        z-index: 2; /* Place the white icon in front */
+        opacity: 0; /* Hide the white icon by default */
+    }
+    
+    .add-box:hover .add-icon .colored {
+        opacity: 0; /* Hide the colored icon on hover */
+    }
+    
+    .add-box:hover .add-icon .white {
+        opacity: 1; /* Show the white icon on hover */
+    }
+    
+    .note-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .note {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+
+     
+    }
+    .note:hover {
+    /* Change border color on hover */
+    background: radial-gradient(circle, rgba(205,174,238,1) 0%, rgb(175, 196, 243) 97%);
+    
+}   
+    .details {
+        flex-grow: 1; /* Allow details to grow to fill available space */
+    }
+    .details  .favorite {
+        flex-grow: 1; /* Allow details to grow to fill available space */
+        display: flex; /* Make note item a flex container */
+        align-items: center; /* Center items vertically */
+        justify-content: space-between; /* Align items with space between */
+        float: right;
+    }
+
+    /* Styles for favorite icon */
+    .favorite {
+        display: flex; /* Make favorite container a flex container */
+        align-items: center; /* Center items vertically */
+    }
+    .note .details .favorite i{
+        margin-top: -30px;
+    }
+
+      /* Styles for heart icons */
+      .heart-icon {
+        position: relative;
+        cursor: pointer; /* Change cursor to pointer on hover */
+        float: right;
+     
+       
+    } 
+
+    /* Initially hide the filled heart icon */
+    .bxs-heart {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    /* Show the filled heart icon when the empty heart icon is clicked */
+    .heart-clicked .bx-heart {
+        display: none; 
+    }
+
+    .heart-clicked .bxs-heart {
+        display: block;
+    }
+
+    /* Style the empty heart icon */
+    .bxs-heart {
+        position: relative;
+    }
+   
+    .add-box {
+        display: flex;
+        align-items: center;
+          cursor: pointer;
+    }
+    
+    .add-icon {
+        margin-right: 10px; /* Adjust as needed */
+        color: #774ea7;
+        font-weight: 700;
+        padding-left: 7px;
+        padding-top: 3px;
+    }
+    
+    .add-text p {
+        margin: 0; /* Remove default margin */
+        color: #774ea7;
+        font-weight: 700;
+    }
+    .note p{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .note span{
+        color: rgb(32, 32, 32);
+        font-size: 16px;
+        
+    display: block;
+    margin-top: 5px;
+    }
+    .bottom-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+  .bottom-content .settings{
+        display: flex   ;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        float: right;
+        padding-top: 10px;
+        margin-bottom: 60px;
+       
+    } 
+    .bottom-content .settings i{
+       font-size: 15px;
+       cursor: pointer;
+    
+    }
+    .bottom-content span{
+        display: flex   ;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        font-size: 14px;
+        
+    }
+    .note .bottom-content{
+        padding-top: 10px;
+        border-top: 1px solid gray;
+        
+    }
+    .note-wrapper .note{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        
+    }
+    .settings {
+        position: relative;
+       
+    }
+    .settings .menu {
+        position: absolute;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+        bottom: 0;
+        border-radius: 4px;
+        padding:  0;
+        background: #ffffff;
+        right: -5px;
+        padding: 5px 0;
+        transform: scale(0);
+        transform-origin: bottom right;
+        margin-bottom: 25px;
+        transition: transform 0.4s ease;
+      
+    }
+    .settings:hover .menu{
+        transform: scale(1);  
+      
+    }
+    .settings .menu li{
+        height: 25px;
+      
+border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        background: #f5f5f5;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 17px 15px;
+      
+    }
+    .menu li:hover{
+        background:#c3c8f3;
+    }
+    .menu li i{
+        padding-right: 8px;
+    }
+    
+    .modal{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+  .modal-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    opacity:0;
+    pointer-events: none;
+    }
+    .modal-box .modal{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 3;
+        max-width: 670px;
+        width: 100%;
+        justify-content: center;
+        transform: translate(-50%,-50%);
+       
+    }
+    .modal-box, .modal-box .modal{
+        opacity:0;
+        pointer-events: none;
+        transition: all 0.25s ease;
+    }
+    .modal-box.show, .modal-box.show .modal{
+        opacity:1;
+        pointer-events: auto;
+    }
+    .modal .content{
+        width: calc(100% - 15px);
+        background: #dcdef0;
+        border-radius: 10px;
+    }
+    .modal .content header {
+        border-bottom: 1px solid #ccc;
+        padding: 15px 25px;
+        background: #d6d9f0;
+    }
+    .content header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .content header p {
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .content header i{
+        color: purple;
+        cursor: pointer;
+        font-size: 23px;
+    }
+
+    .content form{
+        margin: 15px 25px 35px;
+    }
+    .content form .row{
+        margin-bottom: 15px;
+    }
+    form .row label{
+        display: block;
+        font-size: 18px;
+        margin-bottom: 2px;
+    }
+    .content form :where(input,textarea){
+        width: 100%;
+        height: 50px;
+        font-size: 17px;
+        outline: none;
+        padding: 0 15px;
+        border-radius: 4px;
+        border: 1px solid rgb(24, 1, 54);
+        background: transparent;
+    }
+
+  .content  form textarea{
+    margin-top: 10px;
+        height: 150px;
+        resize: none;
+        padding: 8px 15px;
+        margin-bottom: 10px;
+        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+    }
+    .content  form button {
+        margin-top: 15px;
+        width: 100%;
+        height: 50px;
+        border: none;
+        outline: none;
+        background:  rgba(113, 99, 186, 255);
+        color: white;
+        font-size: 17px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .content   button:hover{
+    color: rgb(255, 255, 255); /* Change color on hover */
+    background: #724f99;
+    transition: opacity 0.9s; /* Add transition for smooth opacity change */
+    }
+    .content form input{
+        font-size: 17px;
+        margin-bottom: 20px;
+        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    }
+    .menu li button {
+        border: none; /* Remove border */
+        background: none; /* Remove background */
+        cursor: pointer;
+        font-size: 16px;
+        color: black; /* Set color */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+    
+    .menu li button:hover {
+        color: #231138; /* Change color on hover */
+    }
+    .modal{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       
+    }
+   

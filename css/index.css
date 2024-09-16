@@ -1,0 +1,259 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+  
+}
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 9%;
+}
+.logo{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 60px;
+   
+    font-weight: 700;
+    color: white;
+}
+
+.navlist{
+    display: flex;
+
+}
+.navlist a{
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55 ease;
+}
+
+.navlist a.active {
+    border-bottom: 2px solid white;
+}
+
+
+#menu-icon{
+    color: white;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}  section{
+    padding: 0 19%;
+}   
+.about {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #5D54A4, #7C78B8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-text h4{
+    font-size: 40px;
+   font-family: 'Permanent Marker', cursive;
+   line-height: 1;
+   color: rgb(0, 0, 0);
+   margin:  0 0 12px;
+  }
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .about-text {
+    max-width: 50%; /* Adjust the width as needed */
+    padding-right: 2rem; /* Add space between text and image */
+    line-height: 2;
+  }
+  
+  .about-image {
+    max-width: 50%; /* Adjust the width as needed */
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+  }
+  .notehub{
+    font-weight: bolder;
+  }
+  @media (max-width: 2560px){
+    header{
+        padding: 15px 3%;
+        transition: .2s;
+
+    }
+  }
+  @media (max-width: 1440px){
+    section{
+        padding: 0 12%;
+        transition: .2s;
+    }
+  }
+  @media (max-width: 1024px){
+    .about-image img{
+        width: 100%;
+        height: auto;
+    }
+    .about-text h4{
+        font-size: 40px;
+        margin: 0 0 30px;
+    }
+  }
+  @media (max-width: 768px){
+    section{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .about-text{
+        padding-top: 1px;
+        font-size: 13px;
+    }
+    .about-image{
+        text-align: center;
+    }
+    .about-image img{
+        width: 230px;
+        height: auto;
+    }
+    .about{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 620px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 70%;
+        right: 0;
+        width: 230px;
+        height: 30vh;
+        background: #9204ff;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px 2px;
+        transition: all .55s ease;
+    }
+    .navlist a{
+        display: block;
+        margin: 10px 0;
+        margin-left: 0;
+    }
+   
+  }
+  @media (max-width: 425px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 70%;
+        right: 0;
+        width: 230px;
+        height: 30vh;
+        background: #9204ff;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px 2px;
+        transition: all .55s ease;
+    }
+    .navlist a{
+        display: block;
+        margin: 10px 0;
+        margin-left: 0;
+    }
+    .logoo{
+        width: 200px;
+    }
+    .about-text{
+        padding-top: 1px;
+        font-size: 10px;
+    }
+    .about-image{
+        text-align: center;
+    }
+    .about-image img{
+        width: 200px;
+        height: auto;
+    }
+    .about{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .about-text h4{
+        font-size: 24px;
+        margin: 0 0 30px;
+    }
+  }
+  @media (max-width: 375px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 70%;
+        right: 0;
+        width: 150px;
+        height: 30vh;
+        background: #9204ff;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px 2px;
+        transition: all .55s ease;
+    }
+    .navlist a{
+        display: block;
+        margin: 10px 0;
+        margin-left: 0;
+    }
+    .logoo{
+        width: 200px;
+    }
+    .about-text{
+        padding-top: 1px;
+        font-size: 10px;
+    }
+    .about-image{
+        text-align: center;
+    }
+    .about-image img{
+        width: 200px;
+        height: auto;
+    }
+    .about{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .about-text h4{
+        font-size: 24px;
+        margin: 0 0 30px;
+    }
+
+
+  }

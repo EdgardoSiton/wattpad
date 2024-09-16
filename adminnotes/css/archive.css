@@ -1,0 +1,453 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-color: #e5e5e6;
+}
+
+.container .sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: rgba(113, 99, 186, 255);
+    padding: 30px 0;
+}
+
+.container .sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(225, 225, 225, 0.05);
+}
+
+.container .sidebar ul li a{
+    color: black;
+    display: block;
+    font-size: 18px;
+  
+}
+.container .sidebar ul li a .bx{
+    width: 25px;
+    margin-left: 4px;
+   
+}
+.container .sidebar ul li:hover{
+    background:  #6535a3;
+}
+
+.container .sidebar ul li:hover a{
+color:  #231138;
+}
+.container .sidebar .social_media{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.container .sidebar .social_media a:hover {
+    background:  #6535a3;
+}
+.container .sidebar .social_media a {
+    display: block;
+    width: 40px;
+    background:  #6d5985;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 5px; 
+    color:  #774ea7 ;   
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.container .main-content{
+    flex: 1; /* This will make the main content occupy remaining space */
+    margin-left: 200px;
+    padding: 20px; /* Optional padding */   
+    
+}
+.container .main-content .header {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #ffffff;
+    color: #db3535;
+    border-bottom: 1px solid #774ea7;
+    display: flex;
+    justify-content: center; /* Center horizontally within main content */
+    border-radius: 10px;
+    margin-top: 2px;
+    margin-bottom: 35px;
+}
+
+.container .main-content .info{
+    margin: 20px;
+    color: #717171;
+    line-height: 25px;
+}
+.container .main-content .header div{
+    margin-bottom: 20px;
+}
+.sidebar .logoo{
+    width: 180px;
+    margin-left: 9px;
+}
+
+
+.user {
+    padding-top: 5px;
+    margin-left: auto; /* Pushes user to the right */
+    color: rgba(113, 99, 186, 255);
+}
+
+.search-bar-container {
+   display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+ 
+}
+
+.search-bar {
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    background: #d9d9da;
+
+
+}
+.search-bar::placeholder {
+    padding-left: 15px; /* Adjust padding as needed */
+}
+.search-icon {
+    margin-left: -180px;
+    color: rgb(248, 36, 36);}
+
+    .note-container{
+        background: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 10px;
+    max-height: calc(100vh - 60px); /* Adjust as needed */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+    margin-top: 0;
+
+    }
+  
+    .main-tittle{
+        color: rgba(113, 99, 185, 255);
+        padding-bottom: 0px;
+        font-size: 15px;
+    }
+    .note-card{
+        display: grid;
+    grid-template-columns: repeat(auto-fill, 290px);
+    grid-gap: 20px;
+    padding: 20px;
+    padding-right: 110px;
+    height: 640px;
+    justify-content: center;
+    }
+    .note-card li{
+        height: 280px;
+        list-style: none;
+        background: #d3c1e7;
+        border-radius: 5px;
+        padding: 15px 20px 20px;
+       
+    }
+    .add-box  {
+        display: flex;
+        align-items: center;
+        border: 1px solid #774ea7; /* Add border to the container */
+        border-radius: 5px; /* Add border radius for rounded corners */
+        padding: 5px; /* Add padding for spacing */
+        padding-right: 6px;
+    }
+    .add-box:hover {
+        border-color: #231138; /* Change border color on hover */
+    }
+    
+    .note-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .note {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        
+        
+    }
+    .details {
+        flex-grow: 1; /* Allow details to grow to fill available space */
+    }
+    .details  .favorite {
+        flex-grow: 1; /* Allow details to grow to fill available space */
+        display: flex; /* Make note item a flex container */
+        align-items: center; /* Center items vertically */
+        justify-content: space-between; /* Align items with space between */
+        float: right;
+    }
+
+    /* Styles for favorite icon */
+    .favorite {
+        display: flex; /* Make favorite container a flex container */
+        align-items: center; /* Center items vertically */
+    }
+    .note .details .favorite i{
+        margin-top: -30px;
+    }
+
+      /* Styles for heart icons */
+      .heart-icon {
+        position: relative;
+        cursor: pointer; /* Change cursor to pointer on hover */
+        float: right;
+     
+       
+    } 
+
+    /* Initially hide the filled heart icon */
+    .bxs-heart {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    /* Show the filled heart icon when the empty heart icon is clicked */
+    .heart-clicked .bx-heart {
+        display: none; 
+    }
+
+    .heart-clicked .bxs-heart {
+        display: block;
+    }
+
+    /* Style the empty heart icon */
+    .bx-heart {
+        position: relative;
+    }
+    .main-title {
+        margin: 0; /* Remove default margin */
+        font-size: 30px;
+        margin-left: 20px;
+        color: #774ea7;
+    }
+    
+    .add-box {
+        display: flex;
+        align-items: center;
+          cursor: pointer;
+    }
+    
+    .add-icon {
+        margin-right: 10px; /* Adjust as needed */
+    }
+    
+    .add-text p {
+        margin: 0; /* Remove default margin */
+        color: #774ea7;
+        
+    }
+    .note p{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .note span{
+        color: gray;
+        font-size: 16px;
+    display: block;
+    margin-top: 5px;
+    }
+    .bottom-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+  .bottom-content .settings{
+        display: flex   ;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        float: right;
+        padding-top: 10px;
+    } 
+    .bottom-content .settings i{
+       font-size: 15px;
+       cursor: pointer;
+    }
+    .bottom-content span{
+        display: flex   ;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        font-size: 14px;
+    }
+    .note .bottom-content{
+        padding-top: 10px;
+        border-top: 1px solid gray;
+    }
+    .note-wrapper .note{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .settings {
+        position: relative;
+    }
+    .settings .menu {
+        position: absolute;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+        bottom: 0;
+        border-radius: 4px;
+        padding:  0;
+        background: #ffffff;
+        right: -5px;
+        padding: 5px 0;
+        transform: scale(0);
+        transform-origin: bottom right;
+        transition: transform 0.2s ease;
+    }
+    .settings:hover .menu{
+        transform: scale(1);    
+    }
+    .settings .menu li{
+        height: 25px;
+border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        background: #f5f5f5;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 17px 15px;
+    }
+    .menu li:hover{
+        background: #d19494;
+    }
+    .menu li i{
+        padding-right: 8px;
+    }
+    .modal{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+  .modal-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    opacity:0;
+    pointer-events: none;
+    }
+    .modal-box .modal{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 3;
+        max-width: 400px;
+        width: 100%;
+        justify-content: center;
+        transform: translate(-50%,-50%);
+       
+    }
+    .modal-box, .modal-box .modal{
+        opacity:0;
+        pointer-events: none;
+        transition: all 0.25s ease;
+    }
+    .modal-box.show, .modal-box.show .modal{
+        opacity:1;
+        pointer-events: auto;
+    }
+    .modal .content{
+        width: calc(100% - 15px);
+        background: white;
+        border-radius: 5px;
+    }
+    .modal .content header {
+        border-bottom: 1px solid #ccc;
+        padding: 15px 25px;
+    }
+    .content header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .content header p {
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .content header i{
+        color: purple;
+        cursor: pointer;
+        font-size: 23px;
+    }
+
+    .content form{
+        margin: 15px 25px 35px;
+    }
+    .content form .row{
+        margin-bottom: 20px;
+    }
+    form .row label{
+        display: block;
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    .content form :where(input,textarea){
+        width: 100%;
+        height: 50px;
+        font-size: 17px;
+        outline: none;
+        padding: 0 15px;
+        border-radius: 4px;
+        border: 1px solid purple;
+    }
+
+  .content  form textarea{
+        height: 150px;
+        resize: none;
+        padding: 8px 15px;
+    }
+    .content  form button {
+        width: 100%;
+        height: 50px;
+        border: none;
+        outline: none;
+        background: #724f99;
+        color: white;
+        font-size: 17px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .content form input{
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+ button {
+        border: none; /* Remove border */
+        background: none; /* Remove background */
+        cursor: pointer;
+        font-size: 16px;
+        color: black; /* Set color */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+    
+   button:hover {
+        color: #231138; /* Change color on hover */
+    }
+    
