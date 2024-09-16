@@ -11,7 +11,7 @@ $link = new mysqli($server, $dbuser, $dbpass, $dbname, $dbport);
 
 // Check the connection
 if ($link->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $link->connect_error);
 }
 
 // Your code here
