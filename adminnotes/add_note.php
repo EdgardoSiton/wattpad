@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($stmt = $link->prepare($sql)) {
         // Bind variables to the prepared statement as parameters
-        $stmt->bind_param("iss", $user_id, $title, $description);
+        $stmt->bind_param("ssi",  $title, $description,$user_id);
         
         // Attempt to execute the prepared statement
         if ($stmt->execute()) {
