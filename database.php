@@ -7,10 +7,10 @@ $dbpass = getenv('DB_PASSWORD');      // Fetches DB_PASSWORD from environment va
 $dbport = getenv('DB_PORT') ?: '3306'; // Fetches DB_PORT from environment variables or defaults to 3306
 
 // Create a new mysqli instance with the provided credentials
-$conn = new mysqli($server, $dbuser, $dbpass, $dbname, $dbport);
+$link = new mysqli($server, $dbuser, $dbpass, $dbname, $dbport);
 
 // Check the connection
-if ($conn->connect_error) {
+if ($link->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
