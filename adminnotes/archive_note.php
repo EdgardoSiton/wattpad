@@ -1,7 +1,7 @@
 <?php
 // Include the database configuration file
 include_once 'database.php';
-
+ob_start();
 // Check if note_id is set
 if(isset($_POST['note_id'])) {
     // Sanitize the input to prevent SQL injection
@@ -10,7 +10,6 @@ if(isset($_POST['note_id'])) {
     // Perform the archiving operation
     $sql = "INSERT INTO archive (note_id) VALUES ('$note_id')";
     if(mysqli_query($link, $sql)) {
-        echo "Note archived successfully.";
         header("Location: dashboard.php");
         exit();
        
@@ -20,7 +19,7 @@ if(isset($_POST['note_id'])) {
 } else {
     echo "Note ID not received.";
 }
-
+ob_start();
 // Close database connection
 mysqli_close($link);
 ?>
