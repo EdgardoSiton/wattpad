@@ -73,3 +73,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $link->close();
 }
 ?>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body>
+<?php include 'header.php'; ?>
+<div class="login-container">
+<div class="screen">
+		<div class="screen__content">
+    <form class="login" action="" method="post" novalidate>
+    <h1>Log in</h1>
+            <div class="inputbox">
+                <input type="text" name="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+                <?php if(isset($errors['username'])): ?>
+                    <span class="error-msg"><?php echo $errors['username']; ?></span>
+                <?php endif; ?>
+            </div>
+            <div class="inputbox">
+                <input type="password" name="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt' ></i>
+                <?php if(isset($errors['password'])): ?>
+                    <span class="error-msg"><?php echo $errors['password']; ?></span>
+                <?php endif; ?>
+            </div>
+            <button type="submit" class="btn" name="submit">Login</button>
+            <div class="register-link">
+                <p> Don't have an account? <a href="register.php">Register</a></p>
+            </div>
+    </form>
+    <div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>	
+</div>
+</div>
+</div>
+</body>
+</html>
+
